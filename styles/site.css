@@ -4,9 +4,12 @@
   --marooncolor: #540b0e;
   --paleredcolor: #b3383a;
   --palenavycolor: #44ddc9;
+  --candycolor: #fe5f55;
+  --meatcolor: #b20d30;
+  --specialcolor: rgb(97, 12, 159);
 }
 html {
-  background-color: var(--creamcolor);
+  background-color: var(--creamcolor) !important;
 }
 body {
   min-height: 100vh;
@@ -25,25 +28,30 @@ main img {
 }
 main {
   margin: 0 3.5em 2em 3.5em;
+  overflow: hidden;
 }
 div p {
   font-family: "Nova Mono", monospace;
   font-size: 1.15em;
 }
 div img {
-  width: 30%;
+  border-radius: 20%;
 }
 h3 {
   text-align: center;
   padding: 5px;
   color: var(--marooncolor);
   border-block-end: 2px solid var(--marooncolor);
-  font-size: larger;
+  font-size: 1.8em;
+  margin: 0 0 1em 0;
+  text-shadow: 0 0 10px #fe5f55, 0 0 20px #fe5f55, 0 0 30px #44ddc9,
+    0 0 40px #44ddc9, 0 0 50px #44ddc9, 0 0 60px #44ddc9, 0 0 70px #44ddc9;
 }
 table {
   margin: auto;
   border: 3px double var(--palenavycolor);
-  border-collapse: collapse;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
   width: 50%;
 }
 td,
@@ -54,7 +62,7 @@ th {
 tr:nth-child(even) {
   background-color: var(--palenavycolor);
   color: var(--paleredcolor);
-  font-weight: bold;
+  font-style: oblique;
 }
 th {
   font-weight: bold;
@@ -64,14 +72,21 @@ th {
 td {
   text-align: center;
 }
+li a {
+  text-decoration: none;
+  font-family: "Rubik Mono One", monospace;
+  color: var(--specialcolor);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 header img {
   transition: width 250ms;
-  /* Third years know best */
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 44%;
   height: auto;
+  min-inline-size: 460px;
 }
 header {
   background-color: var(--marooncolor);
@@ -79,24 +94,29 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+div p a {
+  color: var(--paleredcolor);
+}
 .slickborder {
   border: 0.625rem solid darkred;
   box-shadow: 0.625rem 0.625rem 0 0 var(--palenavycolor);
   padding: 1.25rem;
 }
 .mytopLinks a {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
   color: var(--palenavycolor);
   text-decoration: none;
-  padding: 4.5px;
+  padding: 1px;
 }
 .mybottomLinks a {
   font-size: 1.4rem;
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
   font-style: italic;
   color: darkcyan;
-  padding: 4.5px;
+  padding: 1px;
   text-decoration: none;
 }
 .dismiss {
@@ -114,34 +134,51 @@ nav ul li:hover > a {
 nav ul li {
   margin-left: 0;
 }
-.adjustContent {
-  display: flex;
-  justify-content: space-around;
-}
-h4:first-child {
-  color: #f2003c;
-}
 div h4 {
-  font-family: "Shantell Sans", cursive;
+  font-family: "Major Mono Display", monospace;
   font-style: oblique;
-  font-size: 1.8em;
-  color: rgb(28, 28, 240);
+  font-size: 1.5rem;
+  color: rgb(219, 0, 91);
   margin: 0;
-  position: relative;
-  bottom: 0.7em;
-  left: 5.2em;
 }
 .bevsHot {
-  font-family: "Delius Unicase", cursive;
+  font-family: "Shantell Sans", cursive;
   font-size: larger;
-  color: #f2003c;
+  color: var(--paleredcolor);
   list-style-image: url("../images/coffeeList_IconSmall.png");
 }
 .bevsCold {
-  font-family: "Delius Unicase", cursive;
+  font-family: "Shantell Sans", cursive;
   font-size: larger;
-  color: rgb(28, 28, 240);
+  color: darkcyan;
   list-style-image: url("../images/lemon-tea_Icon.png");
+}
+.paistries {
+  font-family: "Shantell Sans", cursive;
+  font-size: larger;
+  color: var(--candycolor);
+  list-style-image: url("../images/pastry.png");
+}
+.standardM {
+  font-family: "Shantell Sans", cursive;
+  font-size: larger;
+  color: var(--meatcolor);
+  list-style-image: url("../images/breakfast.png");
+}
+.XtraM {
+  font-family: "Shantell Sans", cursive;
+  font-size: larger;
+  color: var(--specialcolor);
+  list-style-image: url("../images/badge.png");
+}
+.linkspage {
+  list-style-image: url("../images/link.png");
+}
+.linksimg {
+  background-image: url("../images/factory.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 footer {
   background-color: var(--honeycolor);
@@ -160,12 +197,27 @@ footer div p {
   font-size: smaller;
   color: var(--palenavycolor);
 }
+.videoCenter {
+  display: flex;
+  justify-content: center;
+}
+.stafflayout {
+  display: flex;
+  gap: 2.5rem;
+}
 @media screen and (min-width: 768px) {
   header > img {
     width: 40%;
   }
   nav ul li:hover > a {
     color: orange;
+  }
+  div p a:hover {
+    color: chartreuse;
+    text-decoration: none;
+  }
+  div h4 {
+    font-size: 2em;
   }
   .mytopLinks a {
     padding: 15px;
@@ -180,6 +232,13 @@ footer div p {
   .dismiss {
     display: inline;
   }
+  .adjustContent {
+    display: flex;
+    justify-content: space-around;
+  }
+  .stafflayout {
+    font-size: 20px;
+  }
   nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -187,5 +246,32 @@ footer div p {
   }
   main img {
     float: right;
+  }
+  .nofloat {
+    float: none;
+  }
+  div div {
+    background-image: url(../images/bevBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  footer a:hover {
+    color: whitesmoke;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bevsHot {
+    background-image: url("../images/bevsImage.PNG");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .bevsCold {
+    background-image: url(../images/pinkLemonade.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .linksimg {
+    background-position: top right;
+    background-size: 300px;
   }
 }

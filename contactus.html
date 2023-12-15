@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/site.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
     <link rel="icon" href="images/slap-DESKTOP-0VKU20T.png" />
     <title>Slapshot Coffee Shop/Contact Us</title>
   </head>
@@ -19,18 +20,109 @@
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./openinghours.html">Opening Hours</a></li>
-            <li><a href="./beverages.html">Beverages</a></li>
+            <li class="dismiss"><a href="./beverages.html">Beverages</a></li>
             <li class="dismiss"><a href="./meals.html">Meals</a></li>
             <li><a href="./aboutus.html">About Us</a></li>
             <li class="dismiss"><a href="./employment.html">Employment</a></li>
-            <li class="dismiss"><a href="./signup.html">Sign-Up</a></li>
-            <li class="dismiss"><a href="./contactus.html">Contact Us</a></li>
+            <li class="dismiss"><a href="./links.html">Links</a></li>
+            <li><a href="./contactus.html">Contact Us</a></li>
           </ul>
         </nav>
       </header>
     </div>
-    <main>
-      <p>Coming Soon!</p>
+    <main class="slickborder">
+      <h3>What are your Thoughts?</h3>
+      <form name="QnA" id="QnA" action="contactus.html" method="get">
+        <label for="firstName" class="diiflabel">First Name</label>
+        <input
+          type="text"
+          name="firstName"
+          size="30"
+          maxlength="30"
+          placeholder="Reginald"
+          id="firstName"
+        />
+        <label for="lastName" class="diiflabel">Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          size="30"
+          maxlength="30"
+          placeholder="Etienne"
+          id="lastName"
+        />
+        <label for="Email" class="diiflabel">Email</label>
+        <input
+          type="email"
+          name="Email"
+          id="Email"
+          size="50"
+          maxlength="60"
+          placeholder="reggiesCoff33@email.ca"
+        />
+        <fieldset>
+          <legend>How do you feel about our website?</legend>
+          <input type="radio" name="feel" id="great" />
+          <label for="great">Its Great</label>
+          <br />
+          <input type="radio" name="feel" id="good" />
+          <label for="good">Pretty Good</label>
+          <br />
+          <input type="radio" name="feel" id="pass" />
+          <label for="pass">Its Passable</label>
+          <br />
+          <input type="radio" name="feel" id="mid" />
+          <label for="mid">Uninspired Design</label>
+          <br />
+          <input type="radio" name="feel" id="bad" />
+          <label for="bad">Should be Redone</label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>In what ways should we Improve?</legend>
+          <input type="checkbox" name="improuve" id="color" />
+          <label for="color">The colors aren't varied enough</label>
+          <br />
+          <input type="checkbox" name="improuve" id="idea" />
+          <label for="idea">Why slapping? Sounds lame</label>
+          <br />
+          <input type="checkbox" name="improuve" id="informal" />
+          <label for="informal">The service was poor</label>
+          <br />
+          <input type="checkbox" name="improuve" id="food" />
+          <label for="food">Products are too limited</label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <label for="text" class="diiflabel">Anything else to comment</label>
+          <br />
+          <textarea name="text" id="text" placeholder="Optional..."></textarea>
+          <br />
+          <label for="by" class="diiflabel"
+            >How did you find out about us</label
+          >
+          <br />
+          <select name="foundout" id="by" required>
+            <option value>-- Online --</option>
+            <option value="ad">Advertisements</option>
+            <option value="influencer">Influencer</option>
+            <option value="personal">From a link</option>
+            <option value="no">Not on the Internet</option>
+          </select>
+          <select name="foundout" id="by2">
+            <option value>-- In Person --</option>
+            <option value="ad">Street Advertisement</option>
+            <option value="friend">Friend's Suggestion</option>
+            <option value="influencer">Slap Competitor</option>
+            <option value="personal">Personal Curiosity</option>
+          </select>
+        </fieldset>
+        <br />
+        <div class="movebuttons">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
     </main>
     <footer>
       <nav class="mybottomLinks">
@@ -41,14 +133,14 @@
           <li><a href="./meals.html">Meals</a></li>
           <li><a href="./aboutus.html">About Us</a></li>
           <li><a href="./employment.html">Employment</a></li>
-          <li><a href="./signup.html">Sign-Up</a></li>
+          <li><a href="./links.html">Links</a></li>
           <li><a href="./contactus.html">Contact Us</a></li>
         </ul>
       </nav>
       <address>
         <p>
           626, Boul. de la Cite-des-Jeunes <br />Gatineau, QC <br />Canada
-          <br />J8Y 6T3 <br /><a href="mailto:slapshot@caffeinated.qc.ca"
+          <br />J8Y 6T3 <br /><br /><a href="mailto:slapshot@caffeinated.qc.ca"
             >slapshot@caffeinated.qc.ca</a
           >
         </p>

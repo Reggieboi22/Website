@@ -1,0 +1,97 @@
+form {
+  display: grid;
+  align-items: baseline;
+}
+input,
+select {
+  block-size: 2em;
+  max-inline-size: fit-content;
+  font-size: 1rem;
+  border: 1px solid var(--marooncolor);
+  accent-color: var(--palenavycolor);
+}
+input:focus,
+select:focus {
+  border: 3px solid var(--marooncolor);
+}
+legend {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: var(--specialcolor);
+  font-weight: bolder;
+}
+.diiflabel {
+  color: rgb(219, 0, 91);
+}
+.movebuttons {
+  display: flex;
+  justify-content: center;
+}
+input,
+fieldset,
+select {
+  border-radius: 7px;
+  border: solid var(--marooncolor);
+}
+input[type="radio"],
+input[type="checkbox"],
+input label {
+  vertical-align: middle;
+}
+input[type="submit"] {
+  border: 3px solid var(--palenavycolor);
+  padding: 5px;
+  background-color: var(--marooncolor);
+  color: var(--palenavycolor);
+}
+input[type="reset"] {
+  margin-inline-start: 10px;
+  border: 3px solid var(--candycolor);
+  color: var(--candycolor);
+  background-color: var(--marooncolor);
+}
+input:not([type="radio"], [type="checkbox"]),
+fieldset,
+select {
+  margin-block-end: 15px;
+}
+label {
+  font-family: "Major Mono Display", monospace;
+  font-style: oblique;
+  font-size: 1.2em;
+  color: var(--candycolor);
+  font-weight: bold;
+}
+textarea {
+  resize: none;
+  width: 80%;
+  height: 3em;
+  font-size: large;
+}
+@media (min-width: 768px) {
+  form {
+    grid-template-columns: 130px 1fr;
+    row-gap: 15px;
+    column-gap: 5px;
+  }
+  label {
+    justify-self: end;
+    font-family: "Major Mono Display", monospace;
+    font-style: oblique;
+    font-size: 1.2em;
+    color: var(--candycolor);
+    font-weight: bold;
+  }
+  label:not(fieldset > label)::after {
+    content: ":";
+  }
+  fieldset,
+  div[id="actions"] {
+    grid-column-start: 2;
+  }
+  input:not([type="radio"], [type="checkbox"]),
+  fieldset,
+  select {
+    margin-block-end: 0px;
+  }
+}
